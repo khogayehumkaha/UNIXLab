@@ -141,7 +141,11 @@ sh A3.Pattern.sh $pattern $filename
 
 #### 📌 Execution Details
 
-  * **Prerequisite:** Create a file named `sample.txt` with content:
+  * **Prerequisite:** Create a file named `sample.txt` via gedit / nano / cat :
+    ```
+    cat > sample.txt
+    ```
+   * **Prerequisite:** Add Below Contents and press ctrl + z to quite
     ```
     apple is red
     banana is yellow
@@ -550,6 +554,9 @@ done
 #### 📌 Execution Details
 
   * **Prerequisites:** Create a file named `config.txt`.
+  ```
+  touch config.txt
+  ```
   * **Input:** Command Line Argument.
     > Argument: **config.txt**.
   * **Execution:**
@@ -604,8 +611,8 @@ int main()
 
   * **Compilation/Execution:**
     ```bash
-    gcc B1.ChildProcess.c -o shell
-    ./shell
+    gcc B1.ChildProcess.c 
+    ./a.out
     ```
   * **Input:** Interactive commands.
     > Enter **ls**, then **exit**.
@@ -651,8 +658,8 @@ int main(void)
 
   * **Compilation/Execution:**
     ```bash
-    gcc B2.Signal.c -o signal_test
-    ./signal_test
+    gcc B2.Signal.c 
+    ./a.out
     ```
   * **Input:** Send the `SIGINT` signal by pressing **Ctrl+C**.
   * **Expected Output:**
@@ -694,7 +701,7 @@ END{
 
 #### 📌 Execution Details
 
-  * **Prerequisite:** Create a file named `data.txt` with content:
+  * **Prerequisite:** Create a file named `data.txt` with content:  cat > data.txt
     ```
     Line 1
     Line 2
@@ -811,9 +818,10 @@ An Awk program to pad the end of a line with '\*' symbols (if required) so that 
 
 #### 📌 Execution Details
 
-  * **Prerequisite:** Create a file named `short.txt` with content:
+  * **Prerequisite:** Create a file named `short.txt` via gedit / nano / cat: `cat > short.txt`
     ```
     This line is short.
+    How are you.
     ```
   * **Execution:**
     ```bash
