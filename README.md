@@ -146,13 +146,12 @@ sh A3.Pattern.sh $pattern $filename
     cat > sample.txt
     ```
    * **Prerequisite:** Add Below Contents and press ctrl + z to quite
-
-    ```bash
+    ```
     apple is red
     banana is yellow
     grape is purple
     ```
-    
+
   * **Input:** Command Line Arguments.
     > Set **pattern="banana"** and **filename="sample.txt"**.
   * **Execution:**
