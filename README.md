@@ -5,13 +5,13 @@ This repository contains solutions to various UNIX Lab assignments, including **
 
 ---
 
-## 🐚 Shell Script Assignments (A1 - A9)
+## 🐚 Shell Script Programs (A1 - A9)
 
 ### **A1. Largest and Smallest of Three Numbers**
 
 Find and display the largest and smallest of three numbers using a shell script.
 
-#### `A1.LargestSmallest.sh`
+#### 🧾 `A1.LargestSmallest.sh`
 
 ```bash
 #!/bin/sh
@@ -61,11 +61,11 @@ fi
 
 -----
 
-### **A2. Divisibility Check**
+###  **A2. Divisibility Check**
 
 Check if number 'n' is divisible by 'm'. Inputs can be supplied via command-line arguments or interactively.
 
-#### `A2.Divisible.sh`
+#### 🧾 `A2.Divisible.sh`
 
 ```bash
 #!/bin/bash
@@ -110,7 +110,7 @@ fi
 
 Search for a pattern in a file. Both pattern and file name are taken from the command line arguments or interactively.
 
-#### `A3.Pattern.sh` (The core search script)
+#### 🧾 `A3.Pattern.sh` (The core search script)
 
 ```bash
 #!/bin/sh
@@ -122,7 +122,7 @@ else
 fi
 ```
 
-#### `A3.Search.sh` (The driver script)
+#### 🧾 `A3.Search.sh` (The driver script)
 
 ```bash
 #!/bin/sh
@@ -164,7 +164,7 @@ sh A3.Pattern.sh $pattern $filename
 
 Compare permissions of two files. If identical, output the common permissions in detail; otherwise, output each file's permissions separately.
 
-#### `A4.FilePermission.sh`
+#### 🧾 `A4.FilePermission.sh`
 
 ```bash
 #!/bin/sh
@@ -305,7 +305,7 @@ exit
 
 Perform string operations: calculate length, locate character position, extract first three, and extract last three characters.
 
-#### `A5.Fisrt3Last3.sh`
+#### 🧾 `A5.Fisrt3Last3.sh`
 
 ```bash
 echo "Enter the String"
@@ -363,7 +363,7 @@ fi
 
 Implement basic arithmetic operations (+, -, \*, /) using a `case` statement.
 
-#### `A6.Calculator.sh`
+#### 🧾 `A6.Calculator.sh`
 
 ```bash
 #!/bin/sh
@@ -420,7 +420,7 @@ esac
 
 Take any number of arguments and print them in the same order and in reverse order.
 
-#### `A7.ArgReverse.sh`
+#### 🧾 `A7.ArgReverse.sh`
 
 ```bash
 #!/bin/sh
@@ -475,7 +475,7 @@ done
 
 Create all components of a given path name (e.g., `a/b/c`) as directories.
 
-#### `A8.CreateDir.sh`
+#### 🧾 `A8.CreateDir.sh`
 
 ```bash
 #!/bin/sh
@@ -525,7 +525,7 @@ cd "$curdir"
 
 Check if a file exists. If it does, convert its name to uppercase, but only if a file with the new uppercase name doesn't already exist.
 
-#### `A9.UpperCase.sh`
+#### 🧾 `A9.UpperCase.sh`
 
 ```bash
 #!/bin/sh
@@ -569,7 +569,7 @@ done
 
 A C program that creates a child process to read commands from standard input and execute them.
 
-#### `B1.ChildProcess.c`
+#### 🧾 `B1.ChildProcess.c`
 
 ```c
 #include<stdio.h>
@@ -624,7 +624,7 @@ int main()
 
 A C program to register a signal handler for `SIGINT` (Ctrl+C). When the signal is received, it prints information about the signal.
 
-#### `B2.Signal.c`
+#### 🧾 `B2.Signal.c`
 
 ```c
 #include<stdio.h>
@@ -670,7 +670,7 @@ int main(void)
 
 An Awk script to delete duplicated lines from a text file, while keeping the original order unchanged.
 
-#### `B3.DelDuplicate.awk`
+#### 🧾 `B3.DelDuplicate.awk`
 
 ```awk
 BEGIN{
@@ -719,7 +719,7 @@ END{
 
 A Perl script that takes a file as an argument, checks if it exists, and prints "BINARY" if it is a binary file.
 
-#### `B4.CheckBinary.pl`
+#### 🧾 `B4.CheckBinary.pl`
 
 ```perl
 foreach $f (@ARGV)
@@ -761,7 +761,7 @@ foreach $f (@ARGV)
 
 A Perl script that prompts for a string and a number, then prints the string that many times, each on a separate line.
 
-#### `B5.PrintNTime.pl`
+#### 🧾 `B5.PrintNTime.pl`
 
 ```perl
 #!/usr/bin/perl
@@ -796,7 +796,7 @@ printf("Result is: \n$c");
 
 An Awk program to pad the end of a line with '\*' symbols (if required) so that the total line length is 127 characters.
 
-#### `B6.Line127.awk`
+#### 🧾 `B6.Line127.awk`
 
 ```awk
 {
@@ -830,7 +830,7 @@ An Awk program to pad the end of a line with '\*' symbols (if required) so that 
 
 A Perl script that prints its command line arguments, one per line, after translating all lowercase letters to uppercase.
 
-#### `B7.Upper.pl`
+#### 🧾 `B7.Upper.pl`
 
 ```perl
 #!/usr/bin/perl
@@ -863,7 +863,7 @@ foreach $arg(@ARGV)
 
 Find the sum of the digits of an unsigned number passed through an argument using Perl.
 
-#### `B8.SumofDigit.pl`
+#### 🧾 `B8.SumofDigit.pl`
 
 ```perl
 foreach $num (@ARGV)
@@ -901,7 +901,7 @@ An Awk script that "folds" long lines, breaking any line that exceeds 40 charact
 
 *Note: The prompt asks for 15 columns, but the code implements a 40-column fold.*
 
-#### `B9.Split15.awk`
+#### 🧾 `B9.Split15.awk`
 
 ```awk
 {
