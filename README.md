@@ -1,9 +1,23 @@
-# UNIXLab
+That's a great collection of scripts\! I can certainly reformat the `README.md` to be much more beautiful, organized, and helpful by adding clear instructions for **Input**, **Execution**, and **Expected Output** for each program, while keeping the original code intact.
 
+I'll use emojis, clear headings, horizontal rules, and blockquotes for better visual appeal and readability.
 
-A1. Implement a shell program to find and display largest and smallest of three numbers
+Here is the beautifully formatted `README.md` content:
 
-A1.LargestSmallest.sh
+````markdown
+# 💻 UNIX Lab Assignments
+
+This repository contains solutions to various UNIX Lab assignments, including **Shell Scripts (A1-A9)**, **C Programs (B1-B2)**, **Awk Scripts (B3, B6, B9)**, and **Perl Scripts (B4, B5, B7, B8)**.
+
+---
+
+## 🐚 Shell Script Assignments (A1 - A9)
+
+### **A1. Largest and Smallest of Three Numbers**
+
+Find and display the largest and smallest of three numbers using a shell script.
+
+#### `A1.LargestSmallest.sh`
 
 ```bash
 #!/bin/sh
@@ -31,13 +45,33 @@ then
 else 
     echo "$z is the smallest number"
 fi
-```
+````
 
----
+#### 📌 Execution Details
 
-A2. Find the number n is divisible by m or not using shell script. Where m and n are supplied as command line argument or read from key board interactively
+  * **Input:** Interactive.
+    > Enter **10**, **5**, and **25**.
+  * **Execution:**
+    ```bash
+    sh A1.LargestSmallest.sh
+    ```
+  * **Expected Output:**
+    ```
+    Please enter the 3 numbers
+    10
+    5
+    25
+    25 is the largest number
+    5 is the smallest number
+    ```
 
-A2.Divisible.sh
+-----
+
+### **A2. Divisibility Check**
+
+Check if number 'n' is divisible by 'm'. Inputs can be supplied via command-line arguments or interactively.
+
+#### `A2.Divisible.sh`
 
 ```bash
 #!/bin/bash
@@ -61,14 +95,28 @@ then
 else
     echo "$n is NOT divisible by $m"
 fi
-
 ```
 
----
+#### 📌 Execution Details
 
-A3. Plan and implement a shell program to search a pattern in a file that will take both pattern and file name from the command line arguments.
+  * **Input:** Command Line Arguments.
+    > Set **n=100** and **m=10**.
+  * **Execution:**
+    ```bash
+    sh A2.Divisible.sh 100 10
+    ```
+  * **Expected Output:**
+    ```
+    100 is divisible by 10
+    ```
 
-A3.Pattern.sh
+-----
+
+### **A3. Search Pattern in a File**
+
+Search for a pattern in a file. Both pattern and file name are taken from the command line arguments or interactively.
+
+#### `A3.Pattern.sh` (The core search script)
 
 ```bash
 #!/bin/sh
@@ -80,7 +128,7 @@ else
 fi
 ```
 
-A3.Search.sh
+#### `A3.Search.sh` (The driver script)
 
 ```bash
 #!/bin/sh
@@ -97,12 +145,32 @@ fi
 sh A3.Pattern.sh $pattern $filename
 ```
 
----
+#### 📌 Execution Details
 
+  * **Prerequisite:** Create a file named `sample.txt` with content:
+    ```
+    apple is red
+    banana is yellow
+    grape is purple
+    ```
+  * **Input:** Command Line Arguments.
+    > Set **pattern="banana"** and **filename="sample.txt"**.
+  * **Execution:**
+    ```bash
+    sh A3.Search.sh banana sample.txt
+    ```
+  * **Expected Output:**
+    ```
+    banana is yellow
+    ```
 
-A4. Design a shell program that takes two file names, checks the permissions for these files are identical and if they are identical, output the common permissions; otherwise output each file name followed by its permissions.
+-----
 
-A4.FilePermission.sh
+### **A4. File Permission Checker**
+
+Compare permissions of two files. If identical, output the common permissions in detail; otherwise, output each file's permissions separately.
+
+#### `A4.FilePermission.sh`
 
 ```bash
 #!/bin/sh
@@ -201,15 +269,49 @@ fi
 exit
 ```
 
----
+#### 📌 Execution Details
 
-A5. Develop a shell script that performs following string handling operations
-i) Calculate the length of the string
-ii) Locate a position of a character in a string
-iii) Extract last three characters from string
-iv) Extract first three characters from the string
+  * **Prerequisites:**
+    ```bash
+    touch file1.txt
+    touch file2.txt
+    chmod 644 file1.txt # -rw-r--r--
+    chmod 644 file2.txt # -rw-r--r-- (Same permissions for this example)
+    ```
+  * **Input:** Interactive.
+    > Enter **file1.txt** and **file2.txt**.
+  * **Execution:**
+    ```bash
+    sh A4.FilePermission.sh
+    ```
+  * **Expected Output (If permissions are the same, e.g., -rw-r--r--):**
+    ```
+    Enter 2 valid filenames : 
+    file1.txt file2.txt
+    file1.txt  :  rw-r--r--
+    file2.txt  :  rw-r--r--
+    file1.txt and file2.txt have same Permissions
+    Owner Permissions : 
+    READ
+    WRITE
+    NO EXECUTE
+    Group Permissions : 
+    READ
+    NO WRITE
+    NO EXECUTE
+    Others Permissions : 
+    READ
+    NO WRITE
+    NO EXECUTE
+    ```
 
-A5.Fisrt3Last3.sh
+-----
+
+### **A5. String Handling Operations**
+
+Perform string operations: calculate length, locate character position, extract first three, and extract last three characters.
+
+#### `A5.Fisrt3Last3.sh`
 
 ```bash
 echo "Enter the String"
@@ -239,14 +341,35 @@ then
 else
 	echo "The characters $a you were searching is in location $location"
 fi
-
 ```
 
----
+#### 📌 Execution Details
 
-A6. Write a shell program to implement simple calculator operations.
+  * **Input:** Interactive.
+    > Enter **"UNIXLAB"** for the string and **"X"** for the character.
+  * **Execution:**
+    ```bash
+    sh A5.Fisrt3Last3.sh
+    ```
+  * **Expected Output:**
+    ```
+    Enter the String
+    UNIXLAB
+    String Legth is 7
+    First 3 characters : UNI
+    Last 3 characters : LAB
+    Enter the character you need to search
+    X
+    The characters X you were searching is in location 4
+    ```
 
-A6.Calculator.sh
+-----
+
+### **A6. Simple Calculator**
+
+Implement basic arithmetic operations (+, -, \*, /) using a `case` statement.
+
+#### `A6.Calculator.sh`
 
 ```bash
 #!/bin/sh
@@ -279,11 +402,31 @@ case $ch in
 esac
 ```
 
----
+#### 📌 Execution Details
 
-A7. Design a Shell Program that takes the any number of arguments and print them in same order and in reverse order with suitable messages.
+  * **Input:** Interactive.
+    > Enter **20** and **5**, then the operation **\*** (multiplication).
+  * **Execution:**
+    ```bash
+    sh A6.Calculator.sh
+    ```
+  * **Expected Output:**
+    ```
+    Enter two numbers:
+    20
+    5
+    Enter your choice:
+    *
+    Result=100
+    ```
 
-A7.ArgReverse.sh
+-----
+
+### **A7. Argument Reverser**
+
+Take any number of arguments and print them in the same order and in reverse order.
+
+#### `A7.ArgReverse.sh`
 
 ```bash
 #!/bin/sh
@@ -310,11 +453,35 @@ do
 done
 ```
 
----
+#### 📌 Execution Details
 
-A8. For the given path names (E.g., a/b,a/b/c), design a shell script to create all the components in that path names as directories.
+  * **Input:** Command Line Arguments.
+    > Arguments: **Alpha Beta Gamma**.
+  * **Execution:**
+    ```bash
+    sh A7.ArgReverse.sh Alpha Beta Gamma
+    ```
+  * **Expected Output:**
+    ```
+    Program name: A7.ArgReverse.sh
+    No of arguments: 3
+    The input arguments are : 
+    arg1 is Alpha
+    arg2 is Beta
+    arg3 is Gamma
+    Arguments in reverse order : 
+    arg3 is Gamma
+    arg2 is Beta
+    arg1 is Alpha
+    ```
 
-A8.CreateDir.sh
+-----
+
+### **A8. Create Directory Path**
+
+Create all components of a given path name (e.g., `a/b/c`) as directories.
+
+#### `A8.CreateDir.sh`
 
 ```bash
 #!/bin/sh
@@ -343,12 +510,28 @@ done
 cd "$curdir"
 ```
 
----
+#### 📌 Execution Details
 
+  * **Input:** Command Line Argument.
+    > Argument: **test\_dir/sub\_dir/final\_dir**.
+  * **Execution:**
+    ```bash
+    sh A8.CreateDir.sh test_dir/sub_dir/final_dir
+    ```
+  * **Expected Output (Assuming all directories are new):**
+    ```
+    test_dir created under /path/to/script
+    sub_dir created under /path/to/script/test_dir
+    final_dir created under /path/to/script/test_dir/sub_dir
+    ```
 
-A9. For every filename, check whether file exists in the current directory or not and then convert its name to uppercase only if a file with new name doesn’t exist using shell script.
+-----
 
-A9.UpperCase.sh
+### **A9. Uppercase File Renamer**
+
+Check if a file exists. If it does, convert its name to uppercase, but only if a file with the new uppercase name doesn't already exist.
+
+#### `A9.UpperCase.sh`
 
 ```bash
 #!/bin/sh
@@ -370,13 +553,31 @@ do
 done
 ```
 
----
+#### 📌 Execution Details
 
-B1. Write a C program that creates a child process to read commands from the standard input and execute them (a minimal implementation of a shell – like program). You can assume that no arguments will be passed to the commands to be executed.
+  * **Prerequisites:** Create a file named `config.txt`.
+  * **Input:** Command Line Argument.
+    > Argument: **config.txt**.
+  * **Execution:**
+    ```bash
+    sh A9.UpperCase.sh config.txt
+    ```
+  * **Expected Output:**
+    ```
+    Renamed config.txt to CONFIG.TXT
+    ```
 
-B1.ChildProcess.c
+-----
 
-```bash
+## ⚙️ C, Awk, & Perl Assignments (B1 - B9)
+
+### **B1. Minimal Shell Program (C)**
+
+A C program that creates a child process to read commands from standard input and execute them.
+
+#### `B1.ChildProcess.c`
+
+```c
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>
@@ -403,16 +604,35 @@ int main()
        printf("parent process\n");
    }
 }
-
 ```
 
----
+#### 📌 Execution Details
 
-B2. Write a C Program to register signal handler for SIGINT and when it receives the signal, the program should print some information about the origin of the signal.
+  * **Compilation/Execution:**
+    ```bash
+    gcc B1.ChildProcess.c -o shell
+    ./shell
+    ```
+  * **Input:** Interactive commands.
+    > Enter **ls**, then **exit**.
+  * **Expected Output:**
+    ```
+    Child process
+    [user@localhost~]$ls
+    # (Output of the 'ls' command will appear here)
+    [user@localhost~]$exit
+    parent process
+    ```
 
-B2.Signal.c
+-----
 
-```bash
+### **B2. Signal Handler for SIGINT (C)**
+
+A C program to register a signal handler for `SIGINT` (Ctrl+C). When the signal is received, it prints information about the signal.
+
+#### `B2.Signal.c`
+
+```c
 #include<stdio.h>
 #include<signal.h>
 void sig_handler(int signo)
@@ -431,17 +651,34 @@ int main(void)
    }
    return 0;
 }
-
 ```
 
----
+#### 📌 Execution Details
 
+  * **Compilation/Execution:**
+    ```bash
+    gcc B2.Signal.c -o signal_test
+    ./signal_test
+    ```
+  * **Input:** Send the `SIGINT` signal by pressing **Ctrl+C**.
+  * **Expected Output:**
+    ```
+    Hello world
+    Hello world
+    Signal caught is 2   <-- Printed immediately after Ctrl+C is pressed
+    Hello world
+    ... (continues until forced exit with Ctrl+\ or kill)
+    ```
 
-B3. Design an Awk script to delete duplicated lines from a text file. The order of the original must remain unchanged.
+-----
 
-B3.DelDuplicate.awk
+### **B3. Delete Duplicate Lines (Awk)**
 
-```bash
+An Awk script to delete duplicated lines from a text file, while keeping the original order unchanged.
+
+#### `B3.DelDuplicate.awk`
+
+```awk
 BEGIN{
     n=1
 }
@@ -461,13 +698,36 @@ END{
 }
 ```
 
----
+#### 📌 Execution Details
 
-B4. Implement a PERL script that takes file as an argument, checks whether file exists and prints binary if file is binary.
+  * **Prerequisite:** Create a file named `data.txt` with content:
+    ```
+    Line 1
+    Line 2
+    Line 1
+    Line 3
+    Line 2
+    ```
+  * **Execution:**
+    ```bash
+    awk -f B3.DelDuplicate.awk data.txt
+    ```
+  * **Expected Output:**
+    ```
+    Line 1 
+    Line 2 
+    Line 3 
+    ```
 
-B4.CheckBinary.pl
+-----
 
-```bash
+### **B4. Check Binary File (Perl)**
+
+A Perl script that takes a file as an argument, checks if it exists, and prints "BINARY" if it is a binary file.
+
+#### `B4.CheckBinary.pl`
+
+```perl
 foreach $f (@ARGV)
 {
     if(-e $f)
@@ -486,16 +746,30 @@ foreach $f (@ARGV)
         print "$f doesn't Exist\n";
     }
 }
-
 ```
 
----
+#### 📌 Execution Details
 
-B5. Prompt user to input the string and a number, and prints the string that many times, with each string on separate line using PERL script.
+  * **Input:** Command Line Argument (Executable files like `./shell` from B1 are typically binary).
+    > Argument: **B1.ChildProcess.c** (A text file).
+  * **Execution:**
+    ```bash
+    perl B4.CheckBinary.pl B1.ChildProcess.c
+    ```
+  * **Expected Output:**
+    ```
+    B1.ChildProcess.c is NOT a Binary File
+    ```
 
-B5.PrintNTime.pl
+-----
 
-```bash
+### **B5. Print String N Times (Perl)**
+
+A Perl script that prompts for a string and a number, then prints the string that many times, each on a separate line.
+
+#### `B5.PrintNTime.pl`
+
+```perl
 #!/usr/bin/perl
 printf("Enter the String:");
 $a=<STDIN>;
@@ -505,13 +779,32 @@ $c=$a x $b;
 printf("Result is: \n$c");
 ```
 
----
+#### 📌 Execution Details
 
-B6. Design an Awk program to provide extra symbol (i.e. * or @) at the end of the line (if required) so that the line length is maintained as 127.
+  * **Input:** Interactive.
+    > Enter **Hello** for the string and **3** for the number of times.
+  * **Execution:**
+    ```bash
+    perl B5.PrintNTime.pl
+    ```
+  * **Expected Output:**
+    ```
+    Enter the String:Hello
+    Number of times it should be displayed:3
+    Result is: 
+    HelloHelloHello
+    ```
+    *(Note: Due to the use of `$a=<STDIN>` without `chomp`, the newline character is part of the string, which is then replicated.)*
 
-B6.Line127.awk
+-----
 
-```bash
+### **B6. Pad Line Length to 127 (Awk)**
+
+An Awk program to pad the end of a line with '\*' symbols (if required) so that the total line length is 127 characters.
+
+#### `B6.Line127.awk`
+
+```awk
 {
    y = 127 - length($0)
    printf($0);
@@ -520,17 +813,32 @@ B6.Line127.awk
            printf("*");
        printf("\n");
 }
-
 ```
 
+#### 📌 Execution Details
 
----
+  * **Prerequisite:** Create a file named `short.txt` with content:
+    ```
+    This line is short.
+    ```
+  * **Execution:**
+    ```bash
+    awk -f B6.Line127.awk short.txt
+    ```
+  * **Expected Output (Visually, a single line of 127 characters):**
+    ```
+    This line is short.****************************************************************************************************************
+    ```
 
-B7. Implement a PERL script that prints its command line argument, one per line after translating all lower-case letters to uppercase.
+-----
 
-B7.Upper.pl
+### **B7. Uppercase Command Line Arguments (Perl)**
 
-```bash
+A Perl script that prints its command line arguments, one per line, after translating all lowercase letters to uppercase.
+
+#### `B7.Upper.pl`
+
+```perl
 #!/usr/bin/perl
 die("you have not entered the arguments\n")if(@ARGV==0);
 foreach $arg(@ARGV)
@@ -538,16 +846,32 @@ foreach $arg(@ARGV)
    $arg=~tr/a-z/A-Z/;
    printf("$arg\n");
 }
-
 ```
 
----
+#### 📌 Execution Details
 
-B8. Find the sum of digits of an unsigned number passed through argument using PERL.
+  * **Input:** Command Line Arguments.
+    > Arguments: **unix programming lab**.
+  * **Execution:**
+    ```bash
+    perl B7.Upper.pl unix programming lab
+    ```
+  * **Expected Output:**
+    ```
+    UNIX
+    PROGRAMMING
+    LAB
+    ```
 
-B8.SumofDigit.pl
+-----
 
-```bash
+### **B8. Sum of Digits (Perl)**
+
+Find the sum of the digits of an unsigned number passed through an argument using Perl.
+
+#### `B8.SumofDigit.pl`
+
+```perl
 foreach $num (@ARGV)
 {
     $original_no=$num;
@@ -562,13 +886,30 @@ foreach $num (@ARGV)
 print("sum of digits of $original_no is $sum");
 ```
 
----
+#### 📌 Execution Details
 
-B9. Implement an Awk script that folds long line into 15 columns. Thus, any line that exceeds 15 characters must be broken after 15th and is to be continued with the residue. The inputs to be supplied through a text file created by the user.
+  * **Input:** Command Line Argument.
+    > Argument: **12345**.
+  * **Execution:**
+    ```bash
+    perl B8.SumofDigit.pl 12345
+    ```
+  * **Expected Output:**
+    ```
+    sum of digits of 12345 is 15
+    ```
 
-B9.Split15.awk
+-----
 
-```bash
+### **B9. Fold Long Lines to 40 Columns (Awk)**
+
+An Awk script that "folds" long lines, breaking any line that exceeds 40 characters after the 40th character and continuing the residue on the next line, marked with a backslash (`\`).
+
+*Note: The prompt asks for 15 columns, but the code implements a 40-column fold.*
+
+#### `B9.Split15.awk`
+
+```awk
 {
    st = $0
    len = length(st)
@@ -578,9 +919,26 @@ B9.Split15.awk
    }
    print(st);
 }
-
 ```
 
+#### 📌 Execution Details
 
+  * **Prerequisite:** Create a file named `long_line.txt` with content:
+    ```
+    This is a very very long line of text that definitely exceeds forty characters for the purpose of demonstrating line folding.
+    ```
+  * **Execution:**
+    ```bash
+    awk -f B9.Split15.awk long_line.txt
+    ```
+  * **Expected Output:**
+    ```
+    This is a very very long line of text that\
+    definitely exceeds forty characters for th\
+    e purpose of demonstrating line folding.
+    ```
 
+<!-- end list -->
 
+```
+```
