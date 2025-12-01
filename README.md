@@ -1,11 +1,5 @@
-That's a great collection of scripts\! I can certainly reformat the `README.md` to be much more beautiful, organized, and helpful by adding clear instructions for **Input**, **Execution**, and **Expected Output** for each program, while keeping the original code intact.
 
-I'll use emojis, clear headings, horizontal rules, and blockquotes for better visual appeal and readability.
-
-Here is the beautifully formatted `README.md` content:
-
-````markdown
-# 💻 UNIX Lab Assignments
+# 💻 UNIX Lab Programs 3rd Sem
 
 This repository contains solutions to various UNIX Lab assignments, including **Shell Scripts (A1-A9)**, **C Programs (B1-B2)**, **Awk Scripts (B3, B6, B9)**, and **Perl Scripts (B4, B5, B7, B8)**.
 
