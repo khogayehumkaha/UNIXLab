@@ -1,7 +1,7 @@
 
 # 💻 UNIX Lab Programs 3rd Sem - ISE
 
-This repository contains solutions to various UNIX Lab assignments, including **Shell Scripts (A1-A9)**, **C Programs (B1-B2)**, **Awk Scripts (B3, B6, B9)**, and **Perl Scripts (B4, B5, B7, B8)**.
+This repository contains solutions to various UNIX Lab Programs, including **Shell Scripts (A1-A9)**, **C Programs (B1-B2)**, **Awk Scripts (B3, B6, B9)**, and **Perl Scripts (B4, B5, B7, B8)**.
 
 ---
 
@@ -563,7 +563,7 @@ done
 
 -----
 
-## ⚙️ C, Awk, & Perl Assignments (B1 - B9)
+## ⚙️ C, Awk, & Perl Programs (B1 - B9)
 
 ### **B1. Minimal Shell Program (C)**
 
