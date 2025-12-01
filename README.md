@@ -146,6 +146,7 @@ sh A3.Pattern.sh $pattern $filename
     cat > sample.txt
     ```
    * **Prerequisite:** Add Below Contents and press ctrl + z to quite
+   
     ```
     apple is red
     banana is yellow
