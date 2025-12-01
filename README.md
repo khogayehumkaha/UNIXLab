@@ -33,6 +33,7 @@ else
 fi
 ```
 
+---
 
 A2. Find the number n is divisible by m or not using shell script. Where m and n are supplied as command line argument or read from key board interactively
 
@@ -62,6 +63,8 @@ else
 fi
 
 ```
+
+---
 
 A3. Plan and implement a shell program to search a pattern in a file that will take both pattern and file name from the command line arguments.
 
@@ -93,6 +96,8 @@ else
 fi
 sh A3.Pattern.sh $pattern $filename
 ```
+
+---
 
 
 A4. Design a shell program that takes two file names, checks the permissions for these files are identical and if they are identical, output the common permissions; otherwise output each file name followed by its permissions.
@@ -196,6 +201,8 @@ fi
 exit
 ```
 
+---
+
 A5. Develop a shell script that performs following string handling operations
 i) Calculate the length of the string
 ii) Locate a position of a character in a string
@@ -235,6 +242,8 @@ fi
 
 ```
 
+---
+
 A6. Write a shell program to implement simple calculator operations.
 
 A6.Calculator.sh
@@ -270,6 +279,8 @@ case $ch in
 esac
 ```
 
+---
+
 A7. Design a Shell Program that takes the any number of arguments and print them in same order and in reverse order with suitable messages.
 
 A7.ArgReverse.sh
@@ -298,6 +309,8 @@ do
    num=`expr $num - 1`
 done
 ```
+
+---
 
 A8. For the given path names (E.g., a/b,a/b/c), design a shell script to create all the components in that path names as directories.
 
@@ -330,6 +343,8 @@ done
 cd "$curdir"
 ```
 
+---
+
 
 A9. For every filename, check whether file exists in the current directory or not and then convert its name to uppercase only if a file with new name doesn’t exist using shell script.
 
@@ -354,6 +369,8 @@ do
    fi
 done
 ```
+
+---
 
 B1. Write a C program that creates a child process to read commands from the standard input and execute them (a minimal implementation of a shell – like program). You can assume that no arguments will be passed to the commands to be executed.
 
@@ -389,6 +406,8 @@ int main()
 
 ```
 
+---
+
 B2. Write a C Program to register signal handler for SIGINT and when it receives the signal, the program should print some information about the origin of the signal.
 
 B2.Signal.c
@@ -415,6 +434,8 @@ int main(void)
 
 ```
 
+---
+
 
 B3. Design an Awk script to delete duplicated lines from a text file. The order of the original must remain unchanged.
 
@@ -439,6 +460,8 @@ END{
     }
 }
 ```
+
+---
 
 B4. Implement a PERL script that takes file as an argument, checks whether file exists and prints binary if file is binary.
 
@@ -466,6 +489,8 @@ foreach $f (@ARGV)
 
 ```
 
+---
+
 B5. Prompt user to input the string and a number, and prints the string that many times, with each string on separate line using PERL script.
 
 B5.PrintNTime.pl
@@ -479,6 +504,8 @@ chop($b=<STDIN>);
 $c=$a x $b;
 printf("Result is: \n$c");
 ```
+
+---
 
 B6. Design an Awk program to provide extra symbol (i.e. * or @) at the end of the line (if required) so that the line length is maintained as 127.
 
@@ -497,6 +524,8 @@ B6.Line127.awk
 ```
 
 
+---
+
 B7. Implement a PERL script that prints its command line argument, one per line after translating all lower-case letters to uppercase.
 
 B7.Upper.pl
@@ -511,6 +540,8 @@ foreach $arg(@ARGV)
 }
 
 ```
+
+---
 
 B8. Find the sum of digits of an unsigned number passed through argument using PERL.
 
@@ -530,6 +561,8 @@ foreach $num (@ARGV)
 }
 print("sum of digits of $original_no is $sum");
 ```
+
+---
 
 B9. Implement an Awk script that folds long line into 15 columns. Thus, any line that exceeds 15 characters must be broken after 15th and is to be continued with the residue. The inputs to be supplied through a text file created by the user.
 
