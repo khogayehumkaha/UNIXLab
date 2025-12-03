@@ -1,9 +1,8 @@
 {
    st = $0
-   len = length(st)
-   while (length(st) > 40) {
-       print(substr(st, 1, 40) "\\");
-       st = substr(st, 41)  
+   while (length(st) > 15) {
+       print(substr(st, 1, 15) );
+       st = substr(st, 16)  
    }
    print(st);
 }
