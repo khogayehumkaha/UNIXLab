@@ -1,1 +1,2 @@
-short line
+This line is short.
+How are you.
