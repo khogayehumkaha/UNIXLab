@@ -841,7 +841,9 @@ printf("Result is: \n$c");
     Enter the String:Hello
     Number of times it should be displayed:3
     Result is: 
-    HelloHelloHello
+    Hello
+    Hello
+    Hello
     ```
     *(Note: Due to the use of `$a=<STDIN>` without `chomp`, the newline character is part of the string, which is then replicated.)*
 
