@@ -1,1 +1,1 @@
-This is a very very long line of text that definitely exceeds forty characters for the purpose of demonstrating line folding.
+This is a very very long line of text that definitely exceeds ffifteen characters for the purpose of demonstrating line folding.

@@ -8,5 +8,5 @@ foreach $num (@ARGV)
         $sum=$sum+$digit;
         $num=int($num/10);
     }
-    print("sum of digits of $original_no is $sum \n");
+    printf("sum of digits of $original_no is $sum \n");
 }

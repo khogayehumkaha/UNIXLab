@@ -738,18 +738,19 @@ foreach $f (@ARGV)
     {
         if(-B $f)
         {
-            print "$f is a BINARY FILE\n";
+            printf("$f is a BINARY FILE \n");
         }
         else
         {
-            print "$f is NOT a Binary File\n";
+            printf("$f is NOT a Binary File \n");
         }
     }
     else
     {  
-        print "$f doesn't Exist\n";
+        printf("$f doesn't Exist \n");
     }
 }
+
 ```
 
 #### 📌 Execution Details
@@ -782,16 +783,16 @@ if(-e $f)
 {
     if(-B $f)
     {
-        print "$f is a BINARY FILE\n";
+        printf("$f is a BINARY FILE \n");
     }
     else
     {
-        print "$f is NOT a Binary File\n";
+        printf("$f is NOT a Binary File \n");
     }
 }
 else
 {  
-    print "$f doesn't Exist\n";
+    printf("$f doesn't Exist\n");
 }
 ```
 
@@ -892,7 +893,7 @@ A Perl script that prints its command line arguments, one per line, after transl
 die("you have not entered the arguments\n")if(@ARGV==0);
 foreach $arg(@ARGV)
 {
-   $arg=~tr/a-z/A-Z/;
+   $arg=~tr /a-z/A-Z/ ;
    printf("$arg\n");
 }
 ```
@@ -924,15 +925,16 @@ Find the sum of the digits of an unsigned number passed through an argument usin
 foreach $num (@ARGV)
 {
     $original_no=$num;
-    $sum=0
+    $sum=0;
     until($num==0)
     {
         $digit=$num%10;
         $sum=$sum+$digit;
         $num=int($num/10);
     }
+    printf("sum of digits of $original_no is $sum \n");
 }
-print("sum of digits of $original_no is $sum");
+
 ```
 
 #### 📌 Execution Details
