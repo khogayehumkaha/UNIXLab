@@ -768,7 +768,7 @@ foreach $f (@ARGV)
 
 -----
 
-### **B4. Check Binary File (Perl)  Method :2 **
+### **B4. Check Binary File (Perl)  Method :2**
 
 A Perl script that takes a file as an argument, checks if it exists, and prints "BINARY" if it is a binary file.
 
@@ -943,14 +943,16 @@ foreach $num (@ARGV)
 #### 📌 Execution Details
 
   * **Input:** Command Line Argument.
-    > Argument: **12345**.
+    > Argument: **123 456 789**.
   * **Execution:**
     ```bash
-    perl B8.SumofDigit.pl 12345
+    perl B8.SumofDigit.pl 123 456 789
     ```
   * **Expected Output:**
     ```
-    sum of digits of 12345 is 15
+    sum of digits of 123 is 6 
+    sum of digits of 456 is 15 
+    sum of digits of 789 is 24
     ```
 
 -----
