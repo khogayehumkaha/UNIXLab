@@ -4,15 +4,15 @@ if [ -z "$string" ]
 then 
     echo "Null String"
 else
-    z=` expr "$string" : '.*' `
-    echo "String Legth is $z"
+    z=` expr "$string" : ".*" `
+    echo "String Length is $z"
 fi
 
 if [ $z -ge 6 ]
 then
-    z=` expr "$string" : '\(...\).*' `
+    z=` expr "$string" : "\(...\).*" `
     echo "First 3 characters : $z"
-    x=` expr "$string" : '.*\(...\)' `
+    x=` expr "$string" : ".*\(...\)" `
     echo "Last 3 characters : $x"
 fi
 
