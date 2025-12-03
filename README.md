@@ -957,9 +957,9 @@ foreach $num (@ARGV)
 
 -----
 
-### **B9. Fold Long Lines to 40 Columns (Awk)**
+### **B9. Fold Long Lines to 15 Columns (Awk)**
 
-An Awk script that "folds" long lines, breaking any line that exceeds 40 characters after the 40th character and continuing the residue on the next line, marked with a backslash (`\`).
+An Awk script that "folds" long lines, breaking any line that exceeds 15 characters after the 15th character and continuing the residue on the next line, marked with a backslash (`\`).
 
 *Note: The prompt asks for 15 columns, but the code implements a 40-column fold.*
 
