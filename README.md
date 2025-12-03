@@ -1002,4 +1002,6 @@ An Awk script that "folds" long lines, breaking any line that exceeds 15 charact
 <!-- end list -->
 
 ```
+# if \ required at the end of each line "/" or for * "*"
+print(substr(st, 1, 15) "/");
 ```
