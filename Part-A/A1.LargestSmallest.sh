@@ -14,10 +14,10 @@ else
     echo "$z is the largest number"
 fi
 
-if [ $x -lt $y ] && [ $x -lt $z ]
+if [ $x -le $y ] && [ $x -le $z ]
 then
     echo "$x is the smallest number"
-elif [ $y -lt $x ] && [ $y -lt $z ]
+elif [ $y -le $x ] && [ $y -le $z ]
 then
     echo "$y is the smallest number"
 else 
