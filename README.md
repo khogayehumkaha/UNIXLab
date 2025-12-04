@@ -561,7 +561,7 @@ done
   touch config.txt C.TXT 
   ```
   * **Input:** Command Line Argument.
-    > Argument: **config.txt**.
+    > Argument: **config.txt C.TXT d.txt**.
   * **Execution:**
     ```bash
     sh A9.UpperCase.sh config.txt C.TXT d.txt
