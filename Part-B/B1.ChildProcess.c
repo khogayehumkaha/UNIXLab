@@ -7,7 +7,7 @@ int main()
    int pid,status;
    char comd[20];
    pid=fork();
-   if( pid == 0 )
+   if( pid==0 )
    {
        printf("Child process\n");
        while( strcmp(comd,"exit")!= 0 )
