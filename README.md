@@ -684,20 +684,20 @@ An Awk script to delete duplicated lines from a text file, while keeping the ori
 
 ```awk
 BEGIN{
-    n=1
+    n=1;
 }
 {
-    a[n++]=$0
+    a[n++]=$0;
 }
 END{
     for(i=1;i<n;i++)
     {
-        flag=1
+        flag=1;
         for(j=1;j<i;j++)
             if(a[i]==a[j])
                 flag=0;
         if(flag==1)
-            printf("%s \n",a[i])
+            printf("%s \n",a[i]);
     }
 }
 ```
@@ -857,10 +857,10 @@ An Awk program to pad the end of a line with '\*' symbols (if required) so that 
 
 ```awk
 {
-   y = 127 - length($0)
+   y=127-length($0);
    printf($0);
    if (y > 0 )
-       for(i = 0;i < y; i++)
+       for( i=0 ; i<y ; i++ )
            printf("*");
        printf("\n");
 }
@@ -967,10 +967,10 @@ An Awk script that "folds" long lines, breaking any line that exceeds 15 charact
 
 ```awk
 {
-   st = $0
+   st=$0;
    while (length(st) > 15) {
        print(substr(st, 1, 15) );
-       st = substr(st, 16)  
+       st=substr(st, 16);  
    }
    print(st);
 }
@@ -1000,6 +1000,20 @@ An Awk script that "folds" long lines, breaking any line that exceeds 15 charact
     ```
 
 <!-- end list -->
+
+#### 🧾 `B9.Split15.awk`  Using printf
+
+```awk
+{
+    st=$0;
+    while (length(st) > 15) {
+        printf("%s\n", substr(st, 1, 15));
+        st=substr(st, 16);
+    }
+    printf("%s\n", st);
+}
+
+```
 
 ```
 # if \ required at the end of each line "/" or for * "*"
