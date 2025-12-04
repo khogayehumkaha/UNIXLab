@@ -556,7 +556,7 @@ done
 
 #### 📌 Execution Details
 
-  * **Prerequisites:** Create a file named `config.txt`.
+  * **Prerequisites:** Create a file named `config.txt` and `C.TXT`.
   ```
   touch config.txt C.TXT 
   ```
