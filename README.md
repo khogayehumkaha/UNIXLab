@@ -558,17 +558,19 @@ done
 
   * **Prerequisites:** Create a file named `config.txt`.
   ```
-  touch config.txt
+  touch config.txt C.TXT 
   ```
   * **Input:** Command Line Argument.
     > Argument: **config.txt**.
   * **Execution:**
     ```bash
-    sh A9.UpperCase.sh config.txt
+    sh A9.UpperCase.sh config.txt C.TXT d.txt
     ```
   * **Expected Output:**
     ```
     Renamed config.txt to CONFIG.TXT
+    C.TXT already exists
+    d.txt does not exist
     ```
 
 -----
